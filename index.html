@@ -6,7 +6,7 @@
 	<script src="lib/seriously.js"></script>
 
 	<script src="lib/effects/seriously.hue-saturation.js"></script>
-	<script src="lib/effects/seriously.blur.js"></script>
+	<script src="lib/effects/seriously.ascii.js"></script>
 	
   <!-- ACTION - add your effect script tags here (see INSTRUCTIONS below) -->
 
@@ -82,8 +82,8 @@ video.playsinline=true
     huesaturation.source = sourcevideo;
 
     /// add hue saturation parameteres
-    huesaturation.hue = 1.0 // 0.7
-    huesaturation.saturation = 0 //.9
+    huesaturation.hue = 0.7 // 0.7
+    huesaturation.saturation = 0.9 //.9
 
 
    ///// ACTION - add your effects here - atm effectNamePrevious is 'huesaturation'
@@ -93,12 +93,12 @@ video.playsinline=true
 
    // effectName.parameter = ??? // enter a value (number,boolean (true/false) or string 'mode')
 
-	  var blur = seriously.effect('blur');
-	  blur.source = huesaturation;
+	  var ascii = seriously.effect('ascii');
+	  ascii.source = huesaturation;
 
 
     /////////////// ACTION - change 'huesaturation' as the last effectName in your chain
-    target.source = blur;  // set as last effect in chain
+    target.source = ascii;  // set as last effect in chain
 
 
    //////////////////////do not modify
